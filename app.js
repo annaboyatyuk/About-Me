@@ -11,7 +11,7 @@ alert('Welcome ' + userName + '! This is a fun game, I promise.');
 
 var answer1 = prompt('Does Anna like hiking?' , 'Type yes or no').toLowerCase();
 
-console.log(answer1);
+console.log('the user answers the first question' answer1);
 
 //both of the answers are correct so do i even need an if statement?
 //maybe for the points
@@ -30,7 +30,7 @@ alert('Those were both right, you\'re welcome.');
 alert('You have ' + userPoints + ' points!');
 
 var answer2 = prompt('Does Anna like to read books?' , 'Type yes or no').toLowerCase();
-console.log(answer2);
+console.log('the user answers the second question' answer2);
 
 if (answer2 === 'yes' || answer2 === 'y') {
     userPoints++;
@@ -42,7 +42,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
 alert('Update: you have ' + userPoints + ' points.');
 
 var answer3 = prompt('Does Anna have a pet tiger?' , 'Type yes or no').toLowerCase();
-console.log(answer3);
+console.log('the user answers the third question' answer3);
 
 if (answer3 === 'no' || answer3 === "n") {
     userPoints++;
@@ -54,7 +54,7 @@ if (answer3 === 'no' || answer3 === "n") {
 alert(userName +'! You have ' + userPoints + ' points!');
 
 var answer4 = prompt('Does Anna want to go to Iceland?' , 'Type yes or no').toLowerCase();
-console.log(answer4);
+console.log('the user answers the fourth question' answer4);
 
 if (answer4 === 'yes' || answer4 === 'y') {
     userPoints++;
@@ -66,7 +66,7 @@ if (answer4 === 'yes' || answer4 === 'y') {
 alert('You\'re up to ' + userPoints + ' points!');
 
 var answer5 = prompt('Does Anna like to procrastinate?' , 'Type yes or no').toLowerCase();
-console.log(answer5);
+console.log('the user answers the fifth question' answer5);
 
 if (answer5 === 'yes' || answer5 === 'y') {
     userPoints++;
