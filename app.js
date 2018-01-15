@@ -1,6 +1,7 @@
 'use strict';
 
 var userPoints = 0;
+var questionNumber =0;
 
 console.log('Guessing game about me!');
 
@@ -10,6 +11,8 @@ var userName = prompt('But first, what\'s your name?');
 alert('Welcome ' + userName + '! This is a fun game, I promise.');
 
 var answer1 = prompt('Does Anna like hiking?' , 'Type yes or no').toLowerCase();
+
+questionNumber++;
 
 console.log('the user answers the first question:' + answer1);
 
@@ -29,6 +32,7 @@ alert('Those were both right, you\'re welcome.');
 
 
 var answer2 = prompt('Does Anna like to read books?' , 'Type yes or no').toLowerCase();
+questionNumber++;
 console.log('the user answers the second question:' + answer2);
 
 if (answer2 === 'yes' || answer2 === 'y') {
@@ -40,6 +44,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
 
 
 var answer3 = prompt('Does Anna have a pet tiger?' , 'Type yes or no').toLowerCase();
+questionNumber++;
 console.log('the user answers the third question:' + answer3);
 
 if (answer3 === 'no' || answer3 === 'n') {
@@ -54,6 +59,7 @@ alert(userName +'! You have ' + userPoints + ' points!');
 
 
 var answer4 = prompt('Does Anna want to go to Iceland?' , 'Type yes or no').toLowerCase();
+questionNumber++;
 console.log('the user answers the fourth question:' + answer4);
 
 if (answer4 === 'yes' || answer4 === 'y') {
@@ -65,6 +71,7 @@ if (answer4 === 'yes' || answer4 === 'y') {
 
 
 var answer5 = prompt('Does Anna like to procrastinate?' , 'Type yes or no').toLowerCase();
+questionNumber++;
 console.log('the user answers the fifth question' + answer5);
 
 if (answer5 === 'yes' || answer5 === 'y') {
@@ -98,33 +105,40 @@ for (var guesses = 4; guesses > 0 && notDone; guesses--) {
     alert ('you are out of guesses');
   }
 }
+questionNumber++;
 console.log('the user answered question 6' , guess);
 
 alert('I have 3 sisters!');
 
-// var answer7 = ['iceland' , 'london' , 'loch ness' , 'lake hillier' , 'equador'];
-// var guessAgain = true;
-// var tries = 0;
+var answer7 = ['iceland' , 'london' , 'loch ness' , 'lake hillier' , 'equador'];
+var guessAgain = true;
+var tries = 0;
 
-// while (guessAgain && tries < 7) {
-//   var question7 = prompt('What top five places does Anna want to visit?').toLowerCase();
-//   for (var x = 0; x < answer7.length; x++)
-//     if (answer7[x]) === question7.toLowerCase()) {
-//       alert('you got it! I want to go to' + question7);
-//       guessAgain = false;
-//       counter++;
-//       console.log(question7);
-//       break
-//     }
-//   if (answer7[x] !== question7.toLowerCase()) {
-//     alert('I would probably like to go there but its not my top 5!');
-//     tries++;
-//   }
-// }
+while (guessAgain && tries < 7) {
+  var question7 = prompt('Can you guess one of the top five places that Anna wants to visit?').toLowerCase();
+  for (var x = 0; x < answer7.length; x++)
+    if (answer7[x] === question7.toLowerCase()) {
+      alert('You got it! I want to go to ' + question7);
+      guessAgain = false;
+      tries++;
+      userPoints++;
+      console.log(question7);
+      break;
+    }
+  if (answer7[x] !== question7.toLowerCase()) {
+    alert('I would probably like to go there but its not my top 5!');
+    tries++;
+    console.log('wrong guess' , question7);
+  }
+}
+alert('The top 5 places I want to visit are: ' + answer7);
+
+questionNumber++;
+console.log('the user answered question 7' , question7);
 
 
 
-alert('Congratulations ' + userName + '! You have ' + userPoints + ' points!');
+alert('Congratulations ' + userName + '! You have ' + userPoints + ' points out of ' + questionNumber + ' questions!');
 
 alert('Thank you for taking your time to play!');
 
