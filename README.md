@@ -1,4 +1,8 @@
 # project-directory
+Pair Programming
+
+Driver: Brittany Bolstad
+Navigator: Anna Boyatyuk
 
 User stories for "About me"
 
